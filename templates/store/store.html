@@ -31,7 +31,7 @@
 			<div class="card-body">
 
 				<ul class="list-menu">
-                <li><a href="{%url 'store' %}">Tất cả sản phẩm</a></li>
+                <li><a href="{% url 'store' %}">Tất cả sản phẩm</a></li>
                     {% for category in links %}
 				<li><a href="{{category.get_url}}">{{ category.category_name }}</a></li>
                     {% endfor %}
@@ -142,7 +142,7 @@
 						<span class="price">{{ product.price }} đ</span>
 					</div> <!-- price-wrap.// -->
 				</div>
-				<a href="#" class="btn btn-block btn-primary">Thêm vào giỏ hàng </a>
+				<a href="{% url 'add_cart' product.id %}" class="btn btn-block btn-primary">Thêm vào giỏ hàng </a>
 			</figcaption>
 		</figure>
 	</div> <!-- col.// -->
