@@ -32,7 +32,7 @@
                                     <figure class="itemside align-items-center">
                                         <div class="aside"><img src="{{ cart_item.product.images.url }}" class="img-sm"></div>
                                         <figcaption class="info">
-                                            <a href="#" class="title text-dark">{{ cart_item.product.product_name }}</a>
+                                            <a href="{{ cart_item.product.get_url }}" class="title text-dark">{{ cart_item.product.product_name }}</a>
                                             <p class="text-muted small">Color: Black</p>
                                         </figcaption>
                                     </figure>
@@ -89,8 +89,8 @@
                             <p class="text-center mb-3">
                                 <img src="./images/misc/payments.png" height="26">
                             </p>
-                            <a href="./place-order.html" class="btn btn-primary btn-block"> Checkout </a>
-                            <a href="./store.html" class="btn btn-light btn-block">Continue Shopping</a>
+                            <a href="./place-order.html" class="btn btn-primary btn-block"> Thanh toán </a>
+                            <a href="{% url 'store' %}" class="btn btn-light btn-block">Tiếp tục mua hàng</a>
                         </div> <!-- card-body.// -->
                     </div> <!-- card.// -->
 
